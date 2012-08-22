@@ -52,7 +52,7 @@ echo "
 --routing_source_ip=$host_ip_entry
 --glance_api_servers=$host_ip_entry:9292
 --image_service=nova.image.glance.GlanceImageService
---iscsi_ip_prefix=192.168.22
+--iscsi_ip_prefix=10.0.0.1
 --sql_connection=mysql://nova:$password@127.0.0.1/nova
 --ec2_url=http://$host_ip_entry:8773/services/Cloud
 --keystone_ec2_url=http://$host_ip_entry:5000/v2.0/ec2tokens
@@ -67,7 +67,7 @@ echo "
 # network specific settings
 --network_manager=nova.network.manager.FlatDHCPManager
 --public_interface=eth0
---flat_interface=eth1
+--flat_interface=eth0
 --flat_network_bridge=br100
 --fixed_range=$fixed_range
 --floating_range=$floating_range
